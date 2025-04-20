@@ -1,0 +1,79 @@
+<!-- collections.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About Me</a>
+            <a href="./partfolio.html">Portfolio</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="#">Collections</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="collections" id="collections">
+               
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="../images/Altja_jõgi_Lahemaal.jpg" alt="Image 1">
+                            <img src="https://via.placeholder.com/800x400?text=Image+2" alt="Image 2">
+                            <img src="https://via.placeholder.com/800x400?text=Image+3" alt="Image 3">
+                            <img src="https://via.placeholder.com/800x400?text=Image+4" alt="Image 4">
+                            <img src="https://via.placeholder.com/800x400?text=Image+5" alt="Image 5">
+                            <img src="https://via.placeholder.com/800x400?text=Image+5" alt="Image 6">
+                        </div>
+                        <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+                        <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                    </div>
+               
+        </section>
+    </main>
+
+<footer>
+    <div class="footer-container container">
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="collections.html">Collections</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Motivation</h3>
+            <p>"Success is not final, failure is not fatal: It is the courage to continue that counts."</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: abbosbek@example.com</p>
+            <p>Telegram: @abbosbek</p>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 1rem;">© 2025 Abbosbek Portfolio</p>
+</footer>
+<script src="../js/collections.js"></script>
+</body>
+
+</html>
