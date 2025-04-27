@@ -56,6 +56,7 @@ main {
     justify-content: center;
     /* background-color: #357abd; */
     height: 395px;
+    
 }
 
 
@@ -138,21 +139,24 @@ footer .footer-section p {
 /* Gallery Grid */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat( 3, 150px);
+    grid-template-columns: repeat(3, 150px);
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
-.images{
+
+.images {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
 }
-.gallerypage{
+
+.gallerypage {
     font-family: 'Courier New', Courier, monospace;
-        font-size: 30px;
+    font-size: 30px;
 }
+
 .gallery-img {
     width: 100%;
     height: auto;
@@ -197,73 +201,59 @@ footer .footer-section p {
     }
 }
 
-/* Carousel Styles */
-.carousel {
-    width: 500px;
-    height: 500px;
-    position: relative;
-    max-width: 100%;
-    margin: 20px auto;
-    text-align: center;
-    overflow: hidden;
-    /* Prevent images from overflowing */
+@media (max-width: 992px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
-.carousel-images {
-    display: flex;
-    /* Align images in a row */
-    transition: transform 0.5s ease-in-out;
-    /* Smooth sliding effect */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 }
 
-.carousel-images img {
-    max-width: 100%;
-    display: block;
-    width: 100%;
-    /* Ensure the images are scaled to the container */
-    flex-shrink: 0;
-    /* Prevent the images from shrinking */
-    border-radius: 8px;
+@media (max-width: 768px) {
+
+    /* Fix the main images section */
+    .images {
+        flex-direction: column;
+        align-items: center;
+        /* background-color: #357abd; */
+    }
+
+    /* Make the gallery title smaller */
+    .gallerypage h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Gallery images stacked */
+    .gallery-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Make images bigger */
+    .gallery-img {
+        width: 80%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
+    }
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-}
+@media (max-width: 768px) {
 
-.carousel-button.prev {
-    left: 10px;
-}
-
-.carousel-button.next {
-    right: 10px;
-}
-
-.carousel-dots {
-    text-align: center;
-    margin-top: -150px;
-}
-
-.carousel-dots span {
-    display: inline-block;
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #ddd;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.carousel-dots span.active {
-    background-color: #333;
+    /* Remove fixed height on small screens */
+    main {
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
